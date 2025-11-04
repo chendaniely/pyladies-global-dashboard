@@ -181,7 +181,7 @@ with ui.layout_columns(col_widths=[4, 4, 4]):
 
 # Placeholder for map (you'll add your actual map here)
 with ui.card():
-    ui.card_header("Conference Location Map")
+    ui.card_header("Where our speakers are")
 
     # ui.HTML("""
     #     <div style="height: 400px; background-color: #f0f0f0;
