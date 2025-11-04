@@ -27,6 +27,13 @@ ui.head_content(
     """)
 )
 
+ui.tags.style("""
+        .card-min-width {
+            min-width: 160px;  /* Adjust as needed */
+            word-break: break-word;
+        }
+    """)
+
 # Donation data
 num_sponsors_committed = 22
 num_sponsors_contacted = 68
@@ -153,6 +160,7 @@ with ui.layout_columns(col_widths=[6, 2, 2, 2], height=300):
             </div>
         """),
         theme="orange",
+        class_="card-min-width",
     ):
         "Sponsorship Committed"
         f"${sponsorship_committed:,}"
@@ -165,6 +173,7 @@ with ui.layout_columns(col_widths=[6, 2, 2, 2], height=300):
             </div>
         """),
         theme="success",
+        class_="card-min-width",
     ):
         "Sponsorship Paid"
         f"${sponsorship_paid:,}"
@@ -178,6 +187,7 @@ with ui.layout_columns(col_widths=[6, 2, 2, 2], height=300):
             </div>
         """),
         theme="purple",
+        class_="card-min-width",
     ):
         "Pending Amount"
         f"${sponsorship_pending:,}"
@@ -235,6 +245,7 @@ with ui.layout_columns(col_widths=[6, 2, 2, 2], height=300):
             </div>
         """),
         theme="info",
+        class_="card-min-width",
     ):
         "Sponsors Committed"
         f"{num_sponsors_committed}"
@@ -248,6 +259,7 @@ with ui.layout_columns(col_widths=[6, 2, 2, 2], height=300):
             </div>
         """),
         theme="yellow",
+        class_="card-min-width",
     ):
         "Percent Raised"
         f"{goal_pct:.0%}"
