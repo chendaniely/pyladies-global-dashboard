@@ -15,7 +15,7 @@ dependencies = [
     "plotnine>=0.15.0",
     "requests>=2.32.3",
     "seaborn>=0.13.2",
-    "shiny>=1.4.0",
+    "shiny>=1.5.0",
     "shinylive>=0.8.4",
     "shinywidgets>=0.6.2",
 ]
