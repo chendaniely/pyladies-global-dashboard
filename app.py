@@ -158,9 +158,6 @@ with ui.layout_columns(col_widths=[4, 4, 4]):
                     <div style="font-size: 2em; font-weight: bold;">{donor_count}</div>
                     <div style="font-size: 0.9em; opacity: 0.95;">generous donors</div>
                 </div>
-                <div style="font-size: 0.85em; opacity: 0.9; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.3);">
-                    Last donation: <strong>2 hours ago</strong>
-                </div>
             </div>
         """),
         theme="primary",
