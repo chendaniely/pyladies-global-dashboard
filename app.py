@@ -126,7 +126,7 @@ with ui.layout_columns(col_widths=[4, 4, 4]):
         value=f"${current_amount:,} of ${target_amount:,}",
         showcase=ui.HTML(f"""
             <div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 10px;">
-                <div style="width: 40px; height: 120px; background-color: #e8e8e8;
+                <div style="width: 40px; height: 200%; background-color: #e8e8e8;
                             border-radius: 20px; position: relative; border: 2px solid #ddd;">
                     <div style="position: absolute; bottom: 0; width: 100%;
                                 height: {visual_progress}%; background-color: {bar_color};
