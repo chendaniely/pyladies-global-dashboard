@@ -1,4 +1,5 @@
-from io import StringIO
+# from io import StringIO
+import requests
 
 import numpy as np
 import pandas as pd
@@ -34,6 +35,12 @@ ui.tags.style("""
         }
     """)
 
+# Download the JSON data
+url = "https://portal.pyladies.com/stats.json"
+response = requests.get(url)
+data = response.json()
+stats = data["stats"]
+
 # Donation data
 num_sponsors_committed = 22
 num_sponsors_contacted = 68
@@ -46,16 +53,20 @@ sponsorship_paid_pct = sponsorship_paid / sponsorship_committed * 100
 goal = 15_000
 goal_pct = sponsorship_paid / goal
 
-csv_data_status = """status,count
-paid,18
-rejected,15
-awaiting response,31
-invoiced,1
-agreement signed,1
-agreement sent,2
-"""
+# csv_data_status = """status,count
+# paid,18
+# rejected,15
+# awaiting response,31
+# invoiced,1
+# agreement signed,1
+# agreement sent,2
+# """
 
-sponsor_status = pd.read_csv(StringIO(csv_data_status))
+# sponsor_status = pd.read_csv(StringIO(csv_data_status))
+
+sponsor_status = pd.DataFrame(
+    stats["sponsorship_breakdown"][0]["data"], columns=["status", "count"]
+)
 sponsor_status = sponsor_status.assign(
     status=sponsor_status["status"].str.title().str.replace(" ", "\n")
 )
@@ -63,21 +74,27 @@ sponsor_status["percent"] = (
     sponsor_status["count"] / sponsor_status["count"].sum() * 100
 )
 
-csv_data_tier = """status,count
-booster,2
-champion,1
-connector,2
-individual,5
-partner,7
-supporter,5
-"""
 
-sponsor_tier = pd.read_csv(StringIO(csv_data_tier))
+# csv_data_tier = """status,count
+# booster,2
+# champion,1
+# connector,2
+# individual,5
+# partner,7
+# supporter,5
+# """
+
+# sponsor_tier = pd.read_csv(StringIO(csv_data_tier))
+
+sponsor_tier = pd.DataFrame(
+    stats["sponsorship_breakdown"][1]["data"], columns=["tier", "count"]
+)
+
 sponsor_tier["percent"] = (
     sponsor_tier["count"] / sponsor_tier["count"].sum() * 100
 )
 sponsor_tier = sponsor_tier.assign(
-    status=sponsor_tier["status"].str.title().str.replace(" ", "\n")
+    tier=sponsor_tier["tier"].str.title().str.replace(" ", "\n")
 )
 
 funding_goal = pd.DataFrame({
@@ -316,7 +333,7 @@ with ui.layout_columns(col_widths=[6, 6], height=300):
             return (
                 ggplot(
                     sponsor_tier,
-                    aes(x="reorder(status, count)", y="count", fill="status"),
+                    aes(x="reorder(tier, count)", y="count", fill="tier"),
                 )
                 + geom_bar(stat="identity")
                 + geom_text(
