@@ -42,15 +42,15 @@ data = response.json()
 stats = data["stats"]
 
 # Donation data
-num_sponsors_committed = 22
-num_sponsors_contacted = 68
-sponsorship_paid = 29_350
-sponsorship_paid_num = 18
-sponsorship_pending = 11_500
-sponsorship_pending_num = 4
-sponsorship_committed = 52_850
+num_sponsors_committed = stats["sponsorship_committed_count"]
+num_sponsors_contacted = stats["sponsorship_total_count"]
+sponsorship_paid = float(stats["sponsorship_paid_amount"])
+sponsorship_paid_num = stats["sponsorship_paid_count"]
+sponsorship_pending = float(stats["sponsorship_pending_amount"])
+sponsorship_pending_num = stats["sponsorship_pending_count"]
+sponsorship_committed = float(stats["sponsorship_committed_amount"])
 sponsorship_paid_pct = sponsorship_paid / sponsorship_committed * 100
-goal = 15_000
+goal = stats["sponsorship_goal"]
 goal_pct = sponsorship_paid / goal
 
 # csv_data_status = """status,count
