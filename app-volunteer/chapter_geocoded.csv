@@ -1,0 +1,35 @@
+chapter,volunteers,country_geo,latitude,longitude,country,continent
+Aba / Abia State,1,Nigeria,5.1128008,7.3651376,Nigeria,Africa
+Amsterdam,1,Nederland,52.3730796,4.8924534,Netherlands,Europe
+Bangkok,1,ประเทศไทย,13.7524938,100.4935089,Thailand,Asia
+Bauchi,1,Nigeria,10.6228284,10.0287754,Nigeria,Africa
+Berlin,1,Deutschland,52.5173885,13.3951309,Germany,Europe
+Bogotá,1,Colombia,4.6533817,-74.0836331,Colombia,South America
+Boston,6,United States,42.3554334,-71.060511,United States,North America
+Chicago,1,United States,41.8755616,-87.6244212,United States,North America
+Cochabamba,2,Bolivia,-17.3936114,-66.1568983,Bolivia,South America
+Delhi,1,India,28.6138954,77.2090057,India,Asia
+Dublin,1,Éire / Ireland,53.3493795,-6.2605593,Ireland,Europe
+Duque de Caxias,1,Brasil,-22.7896225,-43.309929,Brazil,South America
+El Alto,1,Bolivia,-16.5048228,-68.1624337,Bolivia,South America
+En Español,1,España,42.2925654,-5.5201749,Spain,Europe
+Ghana,9,Ghana,8.0300284,-1.0800271,Ghana,Africa
+Hyderabad,2,India,17.360589,78.4740613,India,Asia
+Kampala,1,Uganda,0.3177137,32.5813539,Uganda,Africa
+Kuala Lumpur,1,Malaysia,3.1526589,101.7022205,Malaysia,Asia
+La Paz,1,Bolivia,-16.4955455,-68.1336229,Bolivia,South America
+Manila,2,Philippines,14.5904492,120.9803621,Philippines,Asia
+Maputo,3,Moçambique,-25.966213,32.56745,Mozambique,Africa
+NYC,1,United States,40.7127281,-74.0060152,United States,North America
+Nairobi,1,Kenya,-1.2890006,36.8172812,Kenya,Africa
+Pittsburgh,4,United States,40.4416941,-79.9900861,United States,North America
+"Recife, Brasil",2,Brasil,-8.0584933,-34.8848193,Brazil,South America
+Remote,1,United States,43.0059455,-123.8925908,United States,North America
+Seattle,1,United States,47.6038321,-122.330062,United States,North America
+Taiwan,1,臺灣,23.9739374,120.9820179,Taiwan,Asia
+Tampere,1,Suomi / Finland,61.4977929,23.7616372,Finland,Europe
+Toronto,1,Canada,43.6534817,-79.3839347,Canada,North America
+Vancouver,1,Canada,49.2608724,-123.113952,Canada,North America
+Wake Forest,1,United States,35.9803138,-78.5103731,United States,North America
+Windhoek,1,Namibia,-22.5776104,17.0772739,Namibia,Africa
+Yogyakarta,2,Indonesia,-7.9778384,110.3672257,Indonesia,Asia
